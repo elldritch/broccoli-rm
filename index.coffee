@@ -37,7 +37,7 @@ class BroccoliRm extends Plugin
             break
         continue if shouldExclude
 
-        outputPath = path.join @outputPath, rel
+        outputPath = path.join @outputPath, relativePath
         mkdirp.sync path.dirname outputPath
 
         fullPath = path.join basePath, relativePath
